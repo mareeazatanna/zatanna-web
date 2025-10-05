@@ -1,0 +1,87 @@
+﻿/* Emoji + Cute Fonts Support */
+html {
+  font-family: 'Quicksand', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+/* Background Video or Image */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jpg'); /* Change to bg.mp4 if you use a video later */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Profile Card Styling */
+.profile-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+  animation: fadeIn 1.2s ease;
+  width: 350px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffcce0;
+  margin-bottom: 15px;
+}
+
+/* Text Styling */
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ffe6f2;
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #ffd1ec;
+}
+
+p {
+  font-size: 15px;
+  color: #fff;
+  margin: 5px 0;
+}
+
+/* Social Links */
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #ff8ccf;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 25px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.socials a:hover {
+  background: #ffb3e6;
+  transform: scale(1.05);
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
