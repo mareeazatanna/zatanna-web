@@ -1,31 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mareea Zatanna</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mareea Zineb</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="scroll-container">
-    <section class="profile">
-      <img src="pfp.jpg" alt="Profile Picture" class="profile-pic">
-      <h1>Mareea Zineb 🌸</h1>
-      <h2>(aka Zatanna 🪄)</h2>
+
+    <!-- HEADER -->
+    <header class="fade-in">
+        <img src="images/profile.jpg" alt="Mareea Zineb" class="profile-pic">
+        <h1>Mareea Zineb</h1>
+        <p class="subtitle">*Made of love & made for love*</p>
+    </header>
+
+    <!-- ABOUT ME -->
+    <section class="about slide-up">
+        <h2>About Me ✨</h2>
+        <p>Hey! I’m Mareea, 18 years old, living in Algeria. I’m an engineer student at <strong>USTHB</strong>. People call me <strong>Zatanna</strong>. I’m friendly and love fashion, streetwear, and skating 🛹.</p>
     </section>
 
-    <section class="about">
-      <p class="age-city">💫 18yo — Algiers, Algeria 🇩🇿</p>
-      <p class="study">🎓 Studying Engineering & Technology</p>
-      <p class="hobbies">💅 Hobbies: Fashion, Photography, Skating 🛹</p>
+    <!-- FASHION / OOTD -->
+    <section class="fashion slide-up">
+        <h2>My Fashion 👗</h2>
+        <div class="ootd-gallery">
+            <img src="images/ootd1.jpg" alt="OOTD 1" class="fade-in">
+            <img src="images/ootd2.jpg" alt="OOTD 2" class="fade-in">
+            <img src="images/ootd3.jpg" alt="OOTD 3" class="fade-in">
+        </div>
     </section>
 
-    <section class="socials">
-      <a href="https://www.tiktok.com/@skt8ermarea?_t=ZS-90IeUaafwXf&_r=1" target="_blank">🎵 TikTok</a>
-      <a href="https://www.instagram.com/ma_gheea/?hl=en" target="_blank">📸 Instagram</a>
-      <a href="https://snapchat.com/t/Afz09bDj" target="_blank">👻 Snapchat</a>
+    <!-- HOBBIES -->
+    <section class="hobbies slide-up">
+        <h2>Hobbies 🎯</h2>
+        <div class="hobby-gallery">
+            <img src="images/hobby1.jpg" alt="Photography" class="fade-in">
+            <img src="images/hobby2.jpg" alt="Skating" class="fade-in">
+            <img src="images/hobby3.jpg" alt="Hangouts" class="fade-in">
+        </div>
     </section>
-  </div>
+
+    <!-- CONTACT -->
+    <section class="contact slide-up">
+        <h2>Contact Me 📩</h2>
+        <ul>
+            <li>Instagram: <a href="https://www.instagram.com/ma_gheea/?hl=en" target="_blank">ma_gheea</a></li>
+            <li>TikTok: <a href="https://www.tiktok.com/@skt8ermarea?_t=ZS-90IeUaafwXf&_r=1" target="_blank">@skt8ermarea</a></li>
+            <li>Snapchat: <a href="https://snapchat.com/t/Afz09bDj" target="_blank">Add me</a></li>
+            <li>Email: <a href="mailto:Mareeahadjadj@gmail.com">Mareeahadjadj@gmail.com</a></li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="fade-in">
+        <p>© 2025 Mareea Zineb 💖</p>
+    </footer>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const sliders = document.querySelectorAll('.slide-up');
+
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+            entries.forEach(entry => {
+                if(!entry.isIntersecting){
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+        sliders.forEach(slider => appearOnScroll.observe(slider));
+    </script>
+
 </body>
 </html>
