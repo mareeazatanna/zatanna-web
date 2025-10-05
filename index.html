@@ -144,6 +144,28 @@
     faders.forEach((fader) => appearOnScroll.observe(fader));
     sliders.forEach((slider) => appearOnScroll.observe(slider));
   </script>
+
+  <div class="zoom-overlay" id="zoomOverlay">
+  <img src="" alt="Zoomed Image" id="zoomedImg">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.ootd-gallery img, .hobby-gallery img');
+  const overlay = document.getElementById('zoomOverlay');
+  const zoomedImg = document.getElementById('zoomedImg');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      zoomedImg.src = img.src;
+      overlay.classList.add('show');
+    });
+  });
+
+  overlay.addEventListener('click', () => {
+    overlay.classList.remove('show');
+  });
+</script>
 </body>
 </html>
+
 
