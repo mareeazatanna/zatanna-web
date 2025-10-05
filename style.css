@@ -6,16 +6,15 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    background: linear-gradient(135deg, #ffd6e0, #c9b6ff, #ffffff);
-    background-image: url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  overflow-y: scroll;
 }
 /* HEADER */
 header {
@@ -31,21 +30,20 @@ header.appear {
     transform: translateY(0);
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
 header h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
     color: #6b3fa0;
 }
-
+/* Profile */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffcce0;
+  margin-bottom: 15px;
+}
 .subtitle {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -162,4 +160,5 @@ footer.appear {
     opacity: 1;
     transform: translateY(0);
 }
+
 
