@@ -1,90 +1,160 @@
-/* Global font & emoji support */
-html {
-  font-family: 'Quicksand', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Background setup */
 body {
-  margin: 0;
-  padding: 0;
-  background-image: url('bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-  text-align: center;
-  overflow-y: scroll;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #ffd6e0, #c9b6ff, #ffffff);
+    color: #333;
 }
 
-/* Scroll container */
-.scroll-container {
-  backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 25px;
-  width: 90%;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  box-shadow: 0 0 30px rgba(255, 182, 193, 0.4);
-  animation: fadeIn 1.3s ease;
+/* HEADER */
+header {
+    text-align: center;
+    padding: 120px 20px 80px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
 }
 
-/* Profile */
+header.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffcce0;
-  margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-  color: #ffe6f2;
-  font-style: italic;
-  font-weight: normal; /* no bold */
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: #6b3fa0;
 }
 
-h2 {
-  font-size: 17px;
-  color: #ffd6ec;
-  font-style: italic;
-  font-weight: normal;
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #ff77aa;
+    margin-top: 10px;
 }
 
-/* About section */
-p {
-  font-size: 15px;
-  font-style: italic;
-  font-weight: normal;
-  margin: 10px 0;
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 60px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
 }
 
-/* Socials */
-.socials {
-  margin-top: 25px;
+section.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.socials a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background: #ff99cc;
-  padding: 8px 14px;
-  margin: 6px;
-  border-radius: 25px;
-  transition: 0.3s;
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #6b3fa0;
+    margin-bottom: 20px;
 }
 
-.socials a:hover {
-  background: #ffcce0;
-  transform: scale(1.05);
+/* FASHION / OOTD */
+.ootd-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Smooth Fade-In */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.ootd-gallery img {
+    width: calc(33% - 13px);
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.ootd-gallery img.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOBBIES */
+.hobby-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hobby-gallery img {
+    width: calc(33% - 13px);
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.hobby-gallery img.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* CONTACT */
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.contact a {
+    color: #ff77aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    color: #6b3fa0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+footer.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
