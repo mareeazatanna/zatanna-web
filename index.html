@@ -7,7 +7,43 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Expanded view">
+</div>
+    <script>
+const images = document.querySelectorAll('img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+let pressTimer;
+
+// when you hold the image
+images.forEach(img => {
+  img.addEventListener('mousedown', (e) => {
+    pressTimer = setTimeout(() => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    }, 700); // hold for 0.7 seconds
+  });
+
+  // when you release before time or move away
+  img.addEventListener('mouseup', () => clearTimeout(pressTimer));
+  img.addEventListener('mouseleave', () => clearTimeout(pressTimer));
+  img.addEventListener('touchstart', (e) => {
+    pressTimer = setTimeout(() => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    }, 700);
+  });
+  img.addEventListener('touchend', () => clearTimeout(pressTimer));
+});
+
+// tap anywhere outside to close
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
+    <body>
 
     <!-- HEADER -->
     <header class="fade-in">
@@ -90,4 +126,5 @@
 
 </body>
 </html>
+
 
