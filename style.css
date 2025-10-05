@@ -9,10 +9,14 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
-    background: url("images/background.jpg") center/cover fixed no-repeat;
+    background: linear-gradient(135deg, #ffd6e0, #c9b6ff, #ffffff);
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #333;
 }
-
 /* HEADER */
 header {
     text-align: center;
@@ -158,3 +162,4 @@ footer.appear {
     opacity: 1;
     transform: translateY(0);
 }
+
