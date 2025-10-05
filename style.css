@@ -12,7 +12,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #222;
+  color: #A393AD;
   text-align: center;
   overflow-y: scroll;
 }
@@ -160,4 +160,5 @@ footer.appear {
     opacity: 1;
     transform: translateY(0);
 }
+
 
