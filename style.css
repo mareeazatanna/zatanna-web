@@ -1,87 +1,90 @@
-﻿/* Emoji + Cute Fonts Support */
+/* Global font & emoji support */
 html {
   font-family: 'Quicksand', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
-/* Background Video or Image */
+/* Background setup */
 body {
   margin: 0;
   padding: 0;
-  background-image: url('bg.jpg'); /* Change to bg.mp4 if you use a video later */
+  background-image: url('bg.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Profile Card Styling */
-.profile-card {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
+  background-attachment: fixed;
   color: #fff;
-  box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
-  animation: fadeIn 1.2s ease;
-  width: 350px;
+  text-align: center;
+  overflow-y: scroll;
 }
 
-/* Profile Picture */
+/* Scroll container */
+.scroll-container {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(255, 182, 193, 0.4);
+  animation: fadeIn 1.3s ease;
+}
+
+/* Profile */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffcce0;
   margin-bottom: 15px;
 }
 
-/* Text Styling */
 h1 {
   font-family: 'Pacifico', cursive;
+  font-size: 28px;
   color: #ffe6f2;
-  font-size: 26px;
+  font-style: italic;
+  font-weight: normal; /* no bold */
 }
 
 h2 {
-  font-size: 18px;
-  color: #ffd1ec;
+  font-size: 17px;
+  color: #ffd6ec;
+  font-style: italic;
+  font-weight: normal;
 }
 
+/* About section */
 p {
   font-size: 15px;
-  color: #fff;
-  margin: 5px 0;
+  font-style: italic;
+  font-weight: normal;
+  margin: 10px 0;
 }
 
-/* Social Links */
+/* Socials */
 .socials {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .socials a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background: #ff8ccf;
+  background: #ff99cc;
   padding: 8px 14px;
-  margin: 5px;
+  margin: 6px;
   border-radius: 25px;
   transition: 0.3s;
-  font-weight: 600;
 }
 
 .socials a:hover {
-  background: #ffb3e6;
+  background: #ffcce0;
   transform: scale(1.05);
 }
 
-/* Smooth Fade-In Animation */
+/* Smooth Fade-In */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
