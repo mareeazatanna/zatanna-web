@@ -46,6 +46,7 @@ header h1 {
   object-fit: cover;
   border: 3px solid #ffcce0;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .subtitle {
@@ -91,7 +92,7 @@ section h2 {
     flex-wrap: wrap;
 }
 
-/* IMAGE CAPTION HOVER EFFECT */
+/* IMAGE BOX + CAPTIONS */
 .img-box {
   position: relative;
   width: calc(33% - 13px);
@@ -168,4 +169,33 @@ footer {
 footer.appear {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* POPUP FULLSCREEN IMAGE */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.2);
+  animation: fadeZoom 0.3s ease;
+}
+
+@keyframes fadeZoom {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
