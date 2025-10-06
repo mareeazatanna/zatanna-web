@@ -1,171 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mareea Zineb</title>
-  <link rel="stylesheet" href="style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-/* ZOOM OVERLAY STYLE */
-.zoom-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.zoom-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.zoom-overlay.show {
-  visibility: visible;
-  opacity: 1;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mareea Zineb</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="fade-in">
-    <img src="images/profile.jpg" alt="Mareea Zineb" class="profile-pic" />
-    <h1>Mareea Zineb</h1>
-    <p class="subtitle">*Made of love & made for love*</p>
-  </header>
 
-  <!-- ABOUT ME -->
-  <section class="about slide-up">
-    <h2>About Me ✨</h2>
-    <p>
-      Hi! I’m <strong>Mareea</strong> — an 18-year-old engineering student from
-      Algeria, currently studying at <strong>USTHB</strong>.<br />
-      Friends call me <strong>Zatanna</strong> because of my creative and
-      curious side.<br />
-      I’m passionate about <em>fashion</em>, <em>streetwear</em>, and
-      <em>skate culture</em>.<br />
-      I love expressing individuality through my style and capturing life’s
-      energy through art, motion, and connection. 🩰🛹
-    </p>
-  </section>
+    <!-- HEADER -->
+    <header class="fade-in">
+        <img src="images/profile.jpg" alt="Mareea Zineb" class="profile-pic">
+        <h1>Mareea Zineb</h1>
+        <p class="subtitle">*Made of love & made for love*</p>
+    </header>
 
-  <!-- FASHION -->
-  <section class="fashion slide-up">
-    <h2>My Fashion 👗</h2>
-    <div class="ootd-gallery">
-      <img src="images/o1.jpg" alt="OOTD 1" class="fade-in" />
-      <img src="images/o2.jpg" alt="OOTD 2" class="fade-in" />
-      <img src="images/o3.jpg" alt="OOTD 3" class="fade-in" />
-    </div>
-  </section>
+    <!-- ABOUT ME -->
+    <section class="about slide-up">
+        <h2>About Me ✨</h2>
+        <p>
+            Hi! I’m <strong>Mareea</strong> — an 18-year-old engineering student from Algeria, currently studying at <strong>USTHB</strong>.  
+            Friends call me <strong>Zatanna</strong> because of my creative and curious side.  
+            I’m passionate about <em>fashion</em>, <em>streetwear</em>, and <em>skate culture</em>.  
+            I love expressing individuality through my style and capturing life’s energy through art, motion, and connection. 🩰🛹
+        </p>
+    </section>
 
-  <!-- HOBBIES -->
-  <section class="hobbies slide-up">
-    <h2>Hobbies 🎯</h2>
-    <div class="hobby-gallery">
-      <img src="images/ho2.jpg" alt="Photography" class="fade-in" />
-      <img src="images/ho1.jpg" alt="Skating" class="fade-in" />
-      <img src="images/ho3.jpg" alt="Hangouts" class="fade-in" />
-    </div>
-  </section>
+    <!-- FASHION / OOTD -->
+    <section class="fashion slide-up">
+        <h2>My Fashion 👗</h2>
+        <div class="ootd-gallery">
 
-  <!-- CONTACT -->
-  <section class="contact slide-up">
-    <h2>Contact Me 📩</h2>
-    <ul>
-      <li>
-        Instagram:
-        <a href="https://www.instagram.com/ma_gheea/?hl=en" target="_blank"
-          >ma_gheea</a
-        >
-      </li>
-      <li>
-        TikTok:
-        <a
-          href="https://www.tiktok.com/@skt8ermarea?_t=ZS-90IeUaafwXf&_r=1"
-          target="_blank"
-          >@skt8ermarea</a
-        >
-      </li>
-      <li>
-        Snapchat:
-        <a href="https://snapchat.com/t/Afz09bDj" target="_blank">Add me</a>
-      </li>
-      <li>
-        Email:
-        <a href="mailto:Mareeahadjadj@gmail.com"
-          >Mareeahadjadj@gmail.com</a
-        >
-      </li>
-    </ul>
-  </section>
+            <div class="img-box">
+                <img src="images/o1.jpg" alt="OOTD 1" class="fade-in">
+                <p class="caption">University mirror — my favorite mirror at university with my favorite winter fit 💕</p>
+            </div>
 
-  <!-- FOOTER -->
-  <footer class="fade-in">
-    <p>© 2025 Mareea Zineb 💖</p>
-  </footer>
+            <div class="img-box">
+                <img src="images/o2.jpg" alt="OOTD 2" class="fade-in">
+                <p class="caption">Hello Kitty — pink Hello Kitty vibe and cozy bed with a black fit 🖤</p>
+            </div>
 
-  <!-- SCROLL ANIMATION SCRIPT -->
-  <script>
-    const faders = document.querySelectorAll(".fade-in");
-    const sliders = document.querySelectorAll(".slide-up");
+            <div class="img-box">
+                <img src="images/o3.jpg" alt="OOTD 3" class="fade-in">
+                <p class="caption">2101 — my birthday fit from last year 🎂✨</p>
+            </div>
 
-    const appearOptions = {
-      threshold: 0.3,
-      rootMargin: "0px 0px -50px 0px",
-    };
+        </div>
+    </section>
 
-    const appearOnScroll = new IntersectionObserver(function (
-      entries,
-      appearOnScroll
-    ) {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-      });
-    },
-    appearOptions);
+    <!-- HOBBIES -->
+    <section class="hobbies slide-up">
+        <h2>Hobbies 🎯</h2>
+        <div class="hobby-gallery">
 
-    faders.forEach((fader) => appearOnScroll.observe(fader));
-    sliders.forEach((slider) => appearOnScroll.observe(slider));
-  </script>
+            <div class="img-box">
+                <img src="images/ho1.jpg" alt="Photography" class="fade-in">
+                <p class="caption">Photographing — capturing small moments that feel like dreams 📸</p>
+            </div>
 
-  <div class="zoom-overlay" id="zoomOverlay">
-  <img src="" alt="Zoomed Image" id="zoomedImg">
-</div>
+            <div class="img-box">
+                <img src="images/ho2.jpg" alt="Skating" class="fade-in">
+                <p class="caption">Skateboarding — freedom, balance, and street vibes 🛹</p>
+            </div>
 
-<script>
-  const images = document.querySelectorAll('.ootd-gallery img, .hobby-gallery img');
-  const overlay = document.getElementById('zoomOverlay');
-  const zoomedImg = document.getElementById('zoomedImg');
+            <div class="img-box">
+                <img src="images/ho3.jpg" alt="Hangouts" class="fade-in">
+                <p class="caption">Visiting — exploring new places and chasing peaceful moments 🌆</p>
+            </div>
 
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      zoomedImg.src = img.src;
-      overlay.classList.add('show');
-    });
-  });
+        </div>
+    </section>
 
-  overlay.addEventListener('click', () => {
-    overlay.classList.remove('show');
-  });
-</script>
+    <!-- CONTACT -->
+    <section class="contact slide-up">
+        <h2>Contact Me 📩</h2>
+        <ul>
+            <li>Instagram: <a href="https://www.instagram.com/ma_gheea/?hl=en" target="_blank">ma_gheea</a></li>
+            <li>TikTok: <a href="https://www.tiktok.com/@skt8ermarea?_t=ZS-90IeUaafwXf&_r=1" target="_blank">@skt8ermarea</a></li>
+            <li>Snapchat: <a href="https://snapchat.com/t/Afz09bDj" target="_blank">Add me</a></li>
+            <li>Email: <a href="mailto:Mareeahadjadj@gmail.com">Mareeahadjadj@gmail.com</a></li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="fade-in">
+        <p>© 2025 Mareea Zineb 💖</p>
+    </footer>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const sliders = document.querySelectorAll('.slide-up');
+
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+            entries.forEach(entry => {
+                if(!entry.isIntersecting){
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => appearOnScroll.observe(fader));
+        sliders.forEach(slider => appearOnScroll.observe(slider));
+    </script>
+
 </body>
 </html>
-
 
