@@ -1,3 +1,4 @@
+
 /* RESET */
 * {
     margin: 0;
@@ -12,10 +13,11 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #A393AD;
+  color: #eee;
   text-align: center;
   overflow-y: scroll;
 }
+
 /* HEADER */
 header {
     text-align: center;
@@ -35,6 +37,7 @@ header h1 {
     font-size: 4rem;
     color: #6b3fa0;
 }
+
 /* Profile */
 .profile-pic {
   width: 130px;
@@ -44,6 +47,7 @@ header h1 {
   border: 3px solid #ffcce0;
   margin-bottom: 15px;
 }
+
 .subtitle {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -78,30 +82,8 @@ section h2 {
     margin-bottom: 20px;
 }
 
-/* FASHION / OOTD */
-.ootd-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.ootd-gallery img {
-    width: calc(33% - 13px);
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease-out;
-}
-
-.ootd-gallery img.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* HOBBIES */
+/* GALLERIES */
+.ootd-gallery,
 .hobby-gallery {
     display: flex;
     justify-content: space-between;
@@ -109,19 +91,46 @@ section h2 {
     flex-wrap: wrap;
 }
 
-.hobby-gallery img {
-    width: calc(33% - 13px);
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease-out;
+/* IMAGE CAPTION HOVER EFFECT */
+.img-box {
+  position: relative;
+  width: calc(33% - 13px);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.hobby-gallery img.appear {
-    opacity: 1;
-    transform: translateY(0);
+.img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ddd;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.img-box:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* CONTACT */
@@ -160,5 +169,3 @@ footer.appear {
     opacity: 1;
     transform: translateY(0);
 }
-
-
